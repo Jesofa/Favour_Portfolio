@@ -24,14 +24,12 @@ section {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fdfdfd;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;

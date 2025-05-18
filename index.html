@@ -12,7 +12,7 @@
   <nav class="navbar">
     <div class="logo">MyPortfolio</div>
      <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <ul nav id="nav-links" class="nav-links">
+  <ul id="nav-links" class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -167,6 +167,11 @@
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 </script>
-
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
