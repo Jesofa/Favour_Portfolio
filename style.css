@@ -41,19 +41,50 @@ body {
   top: 0;
   z-index: 1000;
 }
-
 .navbar .logo {
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-
+.navbar .logo img {
+  height: 100%;
+  object-fit: contain;
+}
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -254,7 +285,37 @@ footer {
   border-color: #ff6b6b;
   outline: none;
 }
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  text-align: center;
+}
+
+.skill-item img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.skill-item img:hover {
+  transform: scale(1.2);
+}
+
+.skill-item p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
 /* Responsive layout */
 @media (max-width: 768px) {
   .hero-content h1 {
